@@ -726,8 +726,8 @@ body {
 
   .sticky-book-btn {
     flex-grow: 1;
-    background-color: #D98B30; /* Orange/tan matching the screenshot */
-    color: var(--color-text-primary);
+    background-color: var(--color-text-primary); /* Matches .btn-primary */
+    color: var(--color-bg-primary); /* Matches .btn-primary text */
     font-family: var(--font-sans);
     font-weight: 700;
     font-size: 1.2rem;
@@ -735,7 +735,7 @@ body {
     padding: 16px;
     border-radius: 40px;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(217, 139, 48, 0.25);
+    box-shadow: 0 4px 15px rgba(68, 43, 27, 0.25); /* Shadow color matches the dark brown background */
     transition: transform 0.2s ease, opacity 0.2s ease;
   }
   
