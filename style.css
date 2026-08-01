@@ -206,7 +206,8 @@ body {
 
 .card {
   height: 320px; /* Snapped to 320px (8pt scale) */
-  border-radius: var(--space-xs);
+  border-radius: var(--space-sm); /* Increased for a softer, premium rounded look */
+  overflow: hidden; /* Ensures child elements don't bleed out of the rounded corners */
   display: flex;
   flex-direction: column;
   align-items: center;
