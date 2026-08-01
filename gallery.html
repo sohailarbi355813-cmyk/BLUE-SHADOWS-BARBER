@@ -37,12 +37,6 @@
         <a href="index.html#about">About</a>
         <a href="gallery.html">Gallery</a>
         <a href="#contact">Contact</a>
-        <button class="close-menu" id="closeMenuBtn" aria-label="Close menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
       </div>
       <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -126,24 +120,10 @@
 
   <script>
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
     const navLinks = document.getElementById('navLinks');
     
     mobileMenuBtn.addEventListener('click', () => {
-      navLinks.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    closeMenuBtn.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-
-    document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        document.body.style.overflow = '';
-      });
+      navLinks.classList.toggle('active');
     });
   </script>
 </body>
