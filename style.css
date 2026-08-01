@@ -238,9 +238,9 @@ body {
   /* Snapped to 176px (8pt scale: 8 * 22) */
   width: 176px; 
   height: 176px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  /* Removed margin-bottom: auto */
+  object-fit: cover;
+  border-radius: var(--space-xs); /* slight rounding for the photo */
+  /* Removed mix-blend-mode since these are real gallery photos */
 }
 
 .card-title {
