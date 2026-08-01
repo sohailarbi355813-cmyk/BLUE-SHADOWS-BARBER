@@ -31,13 +31,20 @@
           <div class="brand-subtitle">HAIRCUT & SHAVE</div>
         </div>
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#about">About</a>
         <a href="gallery.html">Gallery</a>
         <a href="#contact">Contact</a>
       </div>
+      <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </nav>
     <div class="gallery-title-wrapper">
       <h1 class="section-title">Our Gallery</h1>
@@ -111,5 +118,13 @@
     </div>
   </footer>
 
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
