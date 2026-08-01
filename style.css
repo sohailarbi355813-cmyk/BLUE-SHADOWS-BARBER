@@ -48,8 +48,8 @@ body {
 
 .section-hero {
   background-color: var(--color-bg-primary);
-  /* Replaced arbitrary 40px 20px 320px with standard 8pt tokens */
-  padding: var(--space-xl) var(--space-md) var(--space-7xl) var(--space-md);
+  /* Replaced arbitrary 40px with a very tight 8px token for top padding */
+  padding: var(--space-xs) var(--space-md) var(--space-7xl) var(--space-md);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -256,7 +256,7 @@ body {
 
 .navbar {
   width: 100%;
-  max-width: 1040px;
+  max-width: 100%; /* Pushed to extreme edges */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -573,7 +573,7 @@ body {
    ========================================= */
 @media (max-width: 768px) {
   .section-hero {
-    padding: var(--space-xl) var(--space-sm) var(--space-5xl) var(--space-sm);
+    padding: var(--space-xs) var(--space-sm) var(--space-5xl) var(--space-sm);
     gap: var(--space-2xl);
   }
 
