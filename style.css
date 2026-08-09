@@ -239,6 +239,7 @@ body {
   width: 176px; 
   height: 176px;
   object-fit: cover;
+  object-position: top;
   border-radius: var(--space-xs); /* slight rounding for the photo */
   /* Removed mix-blend-mode since these are real gallery photos */
 }
