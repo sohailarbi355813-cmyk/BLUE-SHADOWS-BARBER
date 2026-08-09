@@ -131,6 +131,35 @@
     mobileMenuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
+
+    // High-end Scroll Reveal Animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      const revealElements = document.querySelectorAll('.gallery-item');
+      
+      revealElements.forEach((el, index) => {
+        el.classList.add('reveal-hidden');
+        
+        const delay = (index % 3) * 0.15;
+        el.style.transitionDelay = `${delay}s, ${delay}s, ${delay}s`;
+        
+        observer.observe(el);
+      });
+    });
   </script>
 </body>
 </html>

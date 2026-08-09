@@ -291,6 +291,39 @@
     mobileMenuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
+
+    // High-end Scroll Reveal Animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15 // Trigger when 15% of the element is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Select elements to reveal
+      const revealElements = document.querySelectorAll('.card, .gallery-item');
+      
+      revealElements.forEach((el, index) => {
+        // Add hidden class initially
+        el.classList.add('reveal-hidden');
+        
+        // Add a slight stagger delay based on column index (for 3 column grid)
+        const delay = (index % 3) * 0.15;
+        // Apply delay to both transform and opacity (and box-shadow for cards)
+        el.style.transitionDelay = `${delay}s, ${delay}s, ${delay}s`;
+        
+        observer.observe(el);
+      });
+    });
   </script>
 </body>
 </html>
