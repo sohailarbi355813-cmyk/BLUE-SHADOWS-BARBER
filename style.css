@@ -297,14 +297,14 @@ body {
 
 .brand-logo {
   display: flex;
-  flex-direction: column;
-  position: relative;
+  align-items: center;
   text-decoration: none;
-  transform: scale(0.6);
-  transform-origin: left center;
-  margin-top: -20px;
-  margin-bottom: -20px;
-  margin-right: -60px;
+}
+
+.custom-logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
 }
 
 .brand-icon {
