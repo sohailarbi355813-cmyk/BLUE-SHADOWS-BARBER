@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   
@@ -259,7 +259,7 @@
         <img src="about-new.jpeg" alt="Blue Shadows Founders" class="about-image" />
       </div>
       <div class="about-text">
-        <h2 class="section-title">The Art of Grooming</h2>
+        <h2 class="section-title reveal-from-left">The Art of Grooming</h2>
         <p class="about-description">
           Founded on the principles of classic barbering and modern precision, Blue Shadows Barbers provides a sanctuary for gentlemen. We are proudly operating in Toronto, Ontario, bringing world-class grooming to our community. We believe in the ritual of the cut, the calm of the hot towel, and the confidence that comes from a masterful shape-up.
         </p>
@@ -473,18 +473,18 @@
       }, observerOptions);
 
       // Select elements to reveal
-      const revealElements = document.querySelectorAll('.card, .gallery-item, .reveal-heading, .reveal-flip-scroll');
+      const revealElements = document.querySelectorAll('.card, .gallery-item, .reveal-heading, .reveal-flip-scroll, .reveal-from-left');
       
       revealElements.forEach((el, index) => {
         // Add hidden class initially if not already styled for reveal
-        if (!el.classList.contains('reveal-heading') && !el.classList.contains('reveal-flip-scroll')) {
+        if (!el.classList.contains('reveal-heading') && !el.classList.contains('reveal-flip-scroll') && !el.classList.contains('reveal-from-left')) {
           el.classList.add('reveal-hidden');
         }
         
         // Add a slight stagger delay based on column index (for 3 column grid)
         const delay = (index % 3) * 0.15;
         // Apply delay to both transform and opacity (and box-shadow for cards)
-        if (el.classList.contains('reveal-heading') || el.classList.contains('reveal-flip-scroll')) {
+        if (el.classList.contains('reveal-heading') || el.classList.contains('reveal-flip-scroll') || el.classList.contains('reveal-from-left')) {
           el.style.transitionDelay = '0s';
         } else {
           el.style.transitionDelay = `${delay}s, ${delay}s, ${delay}s`;

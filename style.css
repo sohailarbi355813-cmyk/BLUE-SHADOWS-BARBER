@@ -760,6 +760,16 @@ body {
   transform: translateY(0);
 }
 
+.reveal-from-left {
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-from-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .reveal-flip-scroll {
   opacity: 0;
   transform: perspective(600px) rotateX(360deg);
