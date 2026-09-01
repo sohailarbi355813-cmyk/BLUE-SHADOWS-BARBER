@@ -217,9 +217,11 @@ body {
   gap: var(--space-md);
   padding: var(--space-md) var(--space-md) var(--space-lg); 
   box-shadow: 0 10px 30px rgba(38, 28, 20, 0.03);
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.8s ease;
 }
 
 .card:hover {
+  transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(38, 28, 20, 0.12);
 }
 
@@ -243,26 +245,6 @@ body {
   object-position: top;
   border-radius: var(--space-xs); 
   transition: filter 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  filter: brightness(0.95) contrast(1.02);
-}
-
-.card-dark, .card-medium, .card-light {
-  background-color: transparent;
-}
-
-.card-img-wrapper {
-  width: 100%;
-  overflow: hidden;
-  border-radius: var(--space-xs);
-}
-
-.card-img {
-  width: 100%; 
-  aspect-ratio: 4 / 5;
-  height: auto;
-  object-fit: cover;
-  object-position: center top;
-  transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), filter 1.2s ease;
   filter: brightness(0.95) contrast(1.02);
 }
 
@@ -750,52 +732,17 @@ body {
   opacity: 0;
   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
-
-.card {
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.4s ease;
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card img {
-  transition: transform 0.6s ease;
-}
-
-.card:hover img {
-  transform: scale(1.05);
-}
-
-/ *  
- * S c r o l l  
- * R e v e a l  
- * i n i t i a l  
- * s t a t e  
- * a d d e d  
- * v i a  
- * J S  
- * /  
- .reveal-hidden {  
-   opacity: 0; transform: translateY(40px);  
- }  
- .reveal-hidden.revealed {  
-   opacity: 1; transform: translateY(0);  
- }\n
-/ *  
- * S c r o l l  
- * R e v e a l  
- * i n i t i a l  
- * s t a t e  
- * a d d e d  
- * v i a  
- * J S  
- * /  
- .reveal-hidden {  
-   opacity: 0; transform: translateY(40px);  
- }  
- .reveal-hidden.revealed {  
-   opacity: 1; transform: translateY(0);  
- }
+/ *  
+ S c r o l l  
+ R e v e a l  
+ i n i t i a l  
+ s t a t e  
+ a d d e d  
+ v i a  
+ J S  
+ * /  
+ . r e v e a l - h i d d e n  
+   o p a c i t y :   0 ;   t r a n s f o r m :   t r a n s l a t e Y ( 4 0 p x ) ;    
+ . r e v e a l - h i d d e n . r e v e a l e d  
+   o p a c i t y :   1 ;   t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;    
+ 
