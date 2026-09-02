@@ -911,3 +911,11 @@ body {
     padding: 12px var(--space-xs);
   }
 }
+
+
+/* Hide old CTA section on desktop */
+@media (min-width: 769px) {
+  .section-cta {
+    display: none !important;
+  }
+}
