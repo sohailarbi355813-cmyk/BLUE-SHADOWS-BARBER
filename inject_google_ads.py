@@ -42,8 +42,8 @@ for file in html_files:
             content = content.replace('href="https://book.squareup.com/appointments/d34rhdcazwo38t" target="_blank"', 
                                       'href="https://book.squareup.com/appointments/d34rhdcazwo38t" target="_blank" onclick="gtag(\'event\', \'conversion\', {\'send_to\': \'AW-17551570187/qe3NCIyTnPqCEIvqnrFB\'});"')
             # Call Us button in sticky footer
-            content = content.replace('href="tel:+1234567890"', 
-                                      'href="tel:+1234567890" onclick="gtag(\'event\', \'conversion\', {\'send_to\': \'AW-17551570187/qe3NCIyTnPqCEIvqnrFB\'});"')
+            content = content.replace('href="tel:+19058647318"', 
+                                      'href="tel:+19058647318" onclick="gtag(\'event\', \'conversion\', {\'send_to\': \'AW-17551570187/qe3NCIyTnPqCEIvqnrFB\'});"')
             
             # The hero button (in index.html)
             content = content.replace('href="https://book.squareup.com/appointments/d34rhdcazwo38t/location/L2K4HDPJ9GD77?rwg_token=AE37R_ibhKv9c_ppnG9isv6O2e0KGNxafWN1WFI0hpzIcBoU0vepBfBXgxU9D-uWhLQhBl4fD_9iYn9DoJrqm6km4a09WHGQCg%3D%3D" class="btn btn-primary" target="_blank"',
@@ -64,8 +64,8 @@ try:
         py_content = py_content.replace("</head>", gtag_script + "\n</head>")
         py_content = py_content.replace('href="https://book.squareup.com/appointments/d34rhdcazwo38t" target="_blank"', 
                                         'href="https://book.squareup.com/appointments/d34rhdcazwo38t" target="_blank" onclick="gtag(\'event\', \'conversion\', {\'send_to\': \'AW-17551570187/qe3NCIyTnPqCEIvqnrFB\'});"')
-        py_content = py_content.replace('href="tel:+1234567890"', 
-                                        'href="tel:+1234567890" onclick="gtag(\'event\', \'conversion\', {\'send_to\': \'AW-17551570187/qe3NCIyTnPqCEIvqnrFB\'});"')
+        py_content = py_content.replace('href="tel:+19058647318"', 
+                                        'href="tel:+19058647318" onclick="gtag(\'event\', \'conversion\', {\'send_to\': \'AW-17551570187/qe3NCIyTnPqCEIvqnrFB\'});"')
         
         with open("generate_blog.py", "w", encoding="utf-8", errors='ignore') as f:
             f.write(py_content)

@@ -179,7 +179,7 @@ newBody += `
     <p class="cta-subtext">Book your appointment and experience precision grooming done properly.</p>
     <div class="cta-buttons">
       <a href="https://book.squareup.com/appointments/d34rhdcazwo38t" target="_blank" class="btn btn-primary">BOOK YOUR APPOINTMENT &rarr;</a>
-      <a href="tel:+1234567890" class="btn btn-secondary" style="border-color: #D9E8F5; color: #F0F7FA; background: transparent;">CALL US</a>
+      <a href="tel:+19058647318" class="btn btn-secondary" style="border-color: #D9E8F5; color: #F0F7FA; background: transparent;">CALL US</a>
     </div>
   </div>
 </section>
@@ -191,7 +191,7 @@ newBody += `
       <div class="footer-info">
         <span class="eyebrow">VISIT US</span>
         <h3 class="footer-address">123 Main Street<br>Milton, ON</h3>
-        <a href="tel:+1234567890" class="footer-phone">CALL (123) 456-7890</a>
+        <a href="tel:+19058647318" class="footer-phone">CALL (905) 864-7318</a>
         <a href="#" class="book-link" style="margin-top:20px;">GET DIRECTIONS &rarr;</a>
       </div>
       <div class="footer-nav">
