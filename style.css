@@ -514,6 +514,124 @@ body {
 }
 
 /* =========================================
+   OUR TEAM SECTION
+   ========================================= */
+
+.section-team {
+  background-color: var(--color-bg-secondary);
+  padding: var(--space-4xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-container {
+  width: 100%;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.team-intro {
+  margin-bottom: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  width: 100%;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: var(--space-sm);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(26, 47, 76, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(26, 47, 76, 0.08);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(26, 47, 76, 0.12);
+}
+
+.team-img-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: block;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.05);
+}
+
+.team-info {
+  padding: var(--space-md) var(--space-sm) var(--space-lg);
+  text-align: center;
+  width: 100%;
+}
+
+.team-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.team-role {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .team-info {
+    padding: 10px 6px 14px;
+  }
+  .team-name {
+    font-size: 1.2rem;
+  }
+  .team-role {
+    font-size: 0.72rem;
+  }
+}
+
+/* =========================================
    GALLERY PAGE
    ========================================= */
 
@@ -847,11 +965,7 @@ body {
   opacity: 1 !important;
   transform: translate(0, 0) !important;
 }
- . r e v e a l - h i d d e n  
-   o p a c i t y :   0 ;   t r a n s f o r m :   t r a n s l a t e Y ( 4 0 p x ) ;    
- . r e v e a l - h i d d e n . r e v e a l e d  
-   o p a c i t y :   1 ;   t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;    
- 
+
 
 /* =========================================
    BLOG STYLES
