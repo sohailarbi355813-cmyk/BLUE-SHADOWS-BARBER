@@ -1014,9 +1014,18 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Adjust body padding so content isn't hidden behind the sticky footer */
-body {
-  padding-bottom: 80px;
+/* Show sticky footer bar only on mobile; hide on laptop and desktop screens */
+@media (min-width: 769px) {
+  .sticky-footer-cta {
+    display: none !important;
+  }
+}
+
+/* Adjust body padding on mobile so content isn't hidden behind the sticky footer */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 80px;
+  }
 }
 
 @media (max-width: 480px) {
