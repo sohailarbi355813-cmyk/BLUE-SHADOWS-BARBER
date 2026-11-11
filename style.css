@@ -284,13 +284,6 @@ body {
 
 .card-offer {
   position: relative;
-  border: 2px solid #1B75BC;
-  background: linear-gradient(180deg, #FFFFFF 0%, #E4F0F7 100%);
-  box-shadow: 0 12px 32px rgba(27, 117, 188, 0.12);
-}
-
-.card-offer:hover {
-  box-shadow: 0 20px 40px rgba(27, 117, 188, 0.2);
 }
 
 .card-offer .card-img {
@@ -299,33 +292,13 @@ body {
 
 .card-offer-tag {
   position: absolute;
-  top: calc(var(--space-md) + 10px);
-  right: calc(var(--space-md) + 10px);
+  top: 8px;
+  right: 10px;
   z-index: 2;
-  background: linear-gradient(135deg, #1B75BC 0%, #1A2F4C 100%);
-  color: #FFFFFF;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 6px 14px;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(26, 47, 76, 0.25);
+  width: 74px;
+  height: auto;
   pointer-events: none;
-}
-
-.card-offer-schedule {
-  display: inline-block;
-  background-color: rgba(27, 117, 188, 0.1);
-  color: #1A2F4C;
-  border: 1px solid rgba(27, 117, 188, 0.28);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 999px;
-  margin-top: 2px;
+  filter: drop-shadow(0 6px 12px rgba(26, 47, 76, 0.25));
 }
 
 /* =========================================
